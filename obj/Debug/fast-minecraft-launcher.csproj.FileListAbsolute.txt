@@ -1,0 +1,10 @@
+C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\bin\Debug\fast-minecraft-launcher.exe.config
+C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\bin\Debug\fast-minecraft-launcher.exe
+C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\bin\Debug\fast-minecraft-launcher.pdb
+C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\obj\Debug\fast-minecraft-launcher.csprojAssemblyReference.cache
+C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\obj\Debug\fast_minecraft_launcher.MainWindow.resources
+C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\obj\Debug\fast_minecraft_launcher.Properties.Resources.resources
+C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\obj\Debug\fast-minecraft-launcher.csproj.GenerateResource.cache
+C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\obj\Debug\fast-minecraft-launcher.csproj.CoreCompileInputs.cache
+C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\obj\Debug\fast-minecraft-launcher.exe
+C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\obj\Debug\fast-minecraft-launcher.pdb
