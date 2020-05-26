@@ -1,16 +1,13 @@
 ﻿using System.IO;
 using System.Net;
+using fast_minecraft_launcher.MojangAccount;
 
 namespace fast_minecraft_launcher
 {
 
     class MojangAuthentication
     {
-        string AccessToken;
-        public string getAccessToken()
-        {
-            return AccessToken;
-        }
+        IServerResponse response;
 
         //Generate access token
         public void authenticate(string user, string pass)
@@ -21,7 +18,6 @@ namespace fast_minecraft_launcher
 
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {
-               
                 
             }
         }

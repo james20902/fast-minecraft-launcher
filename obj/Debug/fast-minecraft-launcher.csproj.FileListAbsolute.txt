@@ -8,3 +8,6 @@ C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-min
 C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\obj\Debug\fast-minecraft-launcher.csproj.CoreCompileInputs.cache
 C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\obj\Debug\fast-minecraft-launcher.exe
 C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\obj\Debug\fast-minecraft-launcher.pdb
+C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\bin\Debug\Newtonsoft.Json.dll
+C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\bin\Debug\Newtonsoft.Json.xml
+C:\Users\JamesP\Desktop\fast-minecraft-launcher\fast-minecraft-launcher\fast-minecraft-launcher\obj\Debug\fast-minecraft-launcher.csproj.CopyComplete
