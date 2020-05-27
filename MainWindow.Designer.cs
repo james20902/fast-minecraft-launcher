@@ -34,8 +34,6 @@
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.SaveLoginInfo = new System.Windows.Forms.CheckBox();
-            this.PermenantLogin = new System.Windows.Forms.CheckBox();
-            this.PermenantLoginWarning = new System.Windows.Forms.Label();
             this.ConsoleLog = new System.Windows.Forms.RichTextBox();
             this.ConsoleLogLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -97,29 +95,6 @@
             this.SaveLoginInfo.UseVisualStyleBackColor = true;
             this.SaveLoginInfo.CheckedChanged += new System.EventHandler(this.SaveLoginInfo_CheckedChanged);
             // 
-            // PermenantLogin
-            // 
-            this.PermenantLogin.AutoSize = true;
-            this.PermenantLogin.Location = new System.Drawing.Point(144, 122);
-            this.PermenantLogin.Name = "PermenantLogin";
-            this.PermenantLogin.Size = new System.Drawing.Size(151, 17);
-            this.PermenantLogin.TabIndex = 6;
-            this.PermenantLogin.Text = "stay logged in permenantly";
-            this.PermenantLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.PermenantLogin.UseVisualStyleBackColor = true;
-            this.PermenantLogin.Visible = false;
-            // 
-            // PermenantLoginWarning
-            // 
-            this.PermenantLoginWarning.AutoSize = true;
-            this.PermenantLoginWarning.Location = new System.Drawing.Point(27, 142);
-            this.PermenantLoginWarning.Name = "PermenantLoginWarning";
-            this.PermenantLoginWarning.Size = new System.Drawing.Size(299, 26);
-            this.PermenantLoginWarning.TabIndex = 7;
-            this.PermenantLoginWarning.Text = "*for security measures, we will ask you to log in every 30 days \nunless the perme" +
-    "nant login option is ticked";
-            this.PermenantLoginWarning.Visible = false;
-            // 
             // ConsoleLog
             // 
             this.ConsoleLog.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -149,8 +124,6 @@
             this.ClientSize = new System.Drawing.Size(655, 242);
             this.Controls.Add(this.ConsoleLogLabel);
             this.Controls.Add(this.ConsoleLog);
-            this.Controls.Add(this.PermenantLoginWarning);
-            this.Controls.Add(this.PermenantLogin);
             this.Controls.Add(this.SaveLoginInfo);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UsernameLabel);
@@ -174,8 +147,6 @@
         private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.CheckBox SaveLoginInfo;
-        private System.Windows.Forms.CheckBox PermenantLogin;
-        private System.Windows.Forms.Label PermenantLoginWarning;
         private System.Windows.Forms.RichTextBox ConsoleLog;
         private System.Windows.Forms.Label ConsoleLogLabel;
     }

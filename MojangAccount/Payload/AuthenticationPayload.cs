@@ -9,7 +9,7 @@ namespace fast_minecraft_launcher.MojangAccount.Payload
 {
     class AuthenticationPayload : IServerRequest
     {
-        private IDictionary<string, Object> agent;
+        private Dictionary<string, Object> agent;
         private string username;
         private string password;
         private string clientToken;
@@ -24,7 +24,7 @@ namespace fast_minecraft_launcher.MojangAccount.Payload
 
         public string getEndpoint()
         {
-            return "/authenticate";
+            return "authenticate";
         }
 
         public string getPayload()
