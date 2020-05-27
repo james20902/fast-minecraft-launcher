@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace fast_minecraft_launcher.MojangAccount.Payload
 {
-    class ErrorPayload : IServerResponse
+    class ErrorResponse : IServerResponse
     {
         private string error;
         private string errorMessage;

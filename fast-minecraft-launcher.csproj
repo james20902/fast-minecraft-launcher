@@ -60,7 +60,7 @@
     <Compile Include="MojangAccount\IServerResponse.cs" />
     <Compile Include="MojangAccount\Payload\AuthenticationPayload.cs" />
     <Compile Include="MojangAccount\Payload\AuthenticationResponse.cs" />
-    <Compile Include="MojangAccount\Payload\ErrorPayload.cs" />
+    <Compile Include="MojangAccount\Payload\ErrorResponse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainWindow.resx">

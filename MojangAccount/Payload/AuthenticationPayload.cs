@@ -16,6 +16,7 @@ namespace fast_minecraft_launcher.MojangAccount.Payload
 
         public AuthenticationPayload(string username, string password)
         {
+            agent = new Dictionary<string, object>();
             agent.Add("name", "Minecraft");
             agent.Add("version", 1);
             this.username = username;

@@ -15,9 +15,9 @@ namespace fast_minecraft_launcher
         private static readonly HttpClient webClient = new HttpClient();
 
         //Generate access token
-        public static async Task<IServerResponse> sendRequest(IServerRequest requestPayload)
+        public static async Task<string> SendRequest(IServerRequest requestPayload)
         {
-            IServerResponse serverResponse = new ErrorPayload();
+            Console.WriteLine(requestPayload.getPayload());
             webClient.BaseAddress = new Uri("https://authserver.mojang.com/");
             webClient.Timeout = TimeSpan.FromMilliseconds(5000);
             try
@@ -25,25 +25,20 @@ namespace fast_minecraft_launcher
                 HttpResponseMessage response = await webClient.PostAsync(
                     requestPayload.getEndpoint(),
                     new StringContent(requestPayload.getPayload(), Encoding.UTF8, "application/json"));
-                switch (requestPayload.getEndpoint())
-                {
-                    case ("authenticate"):
-                        serverResponse = JsonConvert.DeserializeObject<AuthenticationResponse>(await response.Content.ReadAsStringAsync());
-                        break;
-                }
-
-                return serverResponse;
-
+                Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+                return await response.Content.ReadAsStringAsync();
             }
-            catch (TimeoutException timeout)
+            catch (TimeoutException e)
             {
-                return new ErrorPayload();
+                Console.WriteLine(e.StackTrace);
+                return null;
             }
-            catch (HttpRequestException requestException)
-            {
-                return new ErrorPayload();
-            }
+
         }
-      
+
+        public static async Task<AuthenticationResponse> GetAuthenticationResponse(AuthenticationPayload payload)
+        {
+            return JsonConvert.DeserializeObject<AuthenticationResponse>(await SendRequest(payload));
+        }
     }
 }

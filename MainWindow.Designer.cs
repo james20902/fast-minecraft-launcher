@@ -36,11 +36,17 @@
             this.SaveLoginInfo = new System.Windows.Forms.CheckBox();
             this.ConsoleLog = new System.Windows.Forms.RichTextBox();
             this.ConsoleLogLabel = new System.Windows.Forms.Label();
+            this.LoginPanel = new System.Windows.Forms.Panel();
+            this.LauncherPanel = new System.Windows.Forms.Panel();
+            this.ConsolePanel = new System.Windows.Forms.Panel();
+            this.ShowPasswordCheckBox = new System.Windows.Forms.CheckBox();
+            this.LoginPanel.SuspendLayout();
+            this.ConsolePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LogInConfirmButton
             // 
-            this.LogInConfirmButton.Location = new System.Drawing.Point(30, 180);
+            this.LogInConfirmButton.Location = new System.Drawing.Point(14, 154);
             this.LogInConfirmButton.Name = "LogInConfirmButton";
             this.LogInConfirmButton.Size = new System.Drawing.Size(75, 23);
             this.LogInConfirmButton.TabIndex = 0;
@@ -50,14 +56,14 @@
             // 
             // UsernameInput
             // 
-            this.UsernameInput.Location = new System.Drawing.Point(86, 41);
+            this.UsernameInput.Location = new System.Drawing.Point(70, 15);
             this.UsernameInput.Name = "UsernameInput";
             this.UsernameInput.Size = new System.Drawing.Size(100, 20);
             this.UsernameInput.TabIndex = 1;
             // 
             // PasswordInput
             // 
-            this.PasswordInput.Location = new System.Drawing.Point(86, 86);
+            this.PasswordInput.Location = new System.Drawing.Point(70, 60);
             this.PasswordInput.Name = "PasswordInput";
             this.PasswordInput.Size = new System.Drawing.Size(100, 20);
             this.PasswordInput.TabIndex = 2;
@@ -66,7 +72,7 @@
             // UsernameLabel
             // 
             this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Location = new System.Drawing.Point(27, 44);
+            this.UsernameLabel.Location = new System.Drawing.Point(11, 18);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(53, 13);
             this.UsernameLabel.TabIndex = 3;
@@ -76,7 +82,7 @@
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(27, 89);
+            this.PasswordLabel.Location = new System.Drawing.Point(11, 63);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(52, 13);
             this.PasswordLabel.TabIndex = 4;
@@ -86,7 +92,7 @@
             // SaveLoginInfo
             // 
             this.SaveLoginInfo.AutoSize = true;
-            this.SaveLoginInfo.Location = new System.Drawing.Point(30, 122);
+            this.SaveLoginInfo.Location = new System.Drawing.Point(14, 96);
             this.SaveLoginInfo.Name = "SaveLoginInfo";
             this.SaveLoginInfo.Size = new System.Drawing.Size(91, 17);
             this.SaveLoginInfo.TabIndex = 5;
@@ -99,22 +105,65 @@
             // 
             this.ConsoleLog.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ConsoleLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ConsoleLog.Location = new System.Drawing.Point(332, 30);
+            this.ConsoleLog.Location = new System.Drawing.Point(3, 38);
             this.ConsoleLog.Name = "ConsoleLog";
             this.ConsoleLog.ReadOnly = true;
-            this.ConsoleLog.Size = new System.Drawing.Size(311, 173);
+            this.ConsoleLog.Size = new System.Drawing.Size(305, 174);
             this.ConsoleLog.TabIndex = 8;
             this.ConsoleLog.Text = "";
             // 
             // ConsoleLogLabel
             // 
             this.ConsoleLogLabel.AutoSize = true;
-            this.ConsoleLogLabel.Location = new System.Drawing.Point(332, 11);
+            this.ConsoleLogLabel.Location = new System.Drawing.Point(3, 15);
             this.ConsoleLogLabel.Name = "ConsoleLogLabel";
             this.ConsoleLogLabel.Size = new System.Drawing.Size(66, 13);
             this.ConsoleLogLabel.TabIndex = 9;
             this.ConsoleLogLabel.Text = "Console Log";
             this.ConsoleLogLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LoginPanel
+            // 
+            this.LoginPanel.Controls.Add(this.ShowPasswordCheckBox);
+            this.LoginPanel.Controls.Add(this.LauncherPanel);
+            this.LoginPanel.Controls.Add(this.UsernameInput);
+            this.LoginPanel.Controls.Add(this.LogInConfirmButton);
+            this.LoginPanel.Controls.Add(this.UsernameLabel);
+            this.LoginPanel.Controls.Add(this.PasswordLabel);
+            this.LoginPanel.Controls.Add(this.SaveLoginInfo);
+            this.LoginPanel.Controls.Add(this.PasswordInput);
+            this.LoginPanel.Location = new System.Drawing.Point(12, 15);
+            this.LoginPanel.Name = "LoginPanel";
+            this.LoginPanel.Size = new System.Drawing.Size(314, 215);
+            this.LoginPanel.TabIndex = 10;
+            // 
+            // LauncherPanel
+            // 
+            this.LauncherPanel.Location = new System.Drawing.Point(0, 0);
+            this.LauncherPanel.Name = "LauncherPanel";
+            this.LauncherPanel.Size = new System.Drawing.Size(314, 215);
+            this.LauncherPanel.TabIndex = 6;
+            this.LauncherPanel.Visible = false;
+            // 
+            // ConsolePanel
+            // 
+            this.ConsolePanel.Controls.Add(this.ConsoleLog);
+            this.ConsolePanel.Controls.Add(this.ConsoleLogLabel);
+            this.ConsolePanel.Location = new System.Drawing.Point(332, 15);
+            this.ConsolePanel.Name = "ConsolePanel";
+            this.ConsolePanel.Size = new System.Drawing.Size(311, 215);
+            this.ConsolePanel.TabIndex = 11;
+            // 
+            // ShowPasswordCheckBox
+            // 
+            this.ShowPasswordCheckBox.AutoSize = true;
+            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(121, 96);
+            this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
+            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(99, 17);
+            this.ShowPasswordCheckBox.TabIndex = 7;
+            this.ShowPasswordCheckBox.Text = "show password";
+            this.ShowPasswordCheckBox.UseVisualStyleBackColor = true;
+            this.ShowPasswordCheckBox.CheckedChanged += new System.EventHandler(this.ShowPasswordCheckBox_CheckedChanged);
             // 
             // MainWindow
             // 
@@ -122,20 +171,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(655, 242);
-            this.Controls.Add(this.ConsoleLogLabel);
-            this.Controls.Add(this.ConsoleLog);
-            this.Controls.Add(this.SaveLoginInfo);
-            this.Controls.Add(this.PasswordLabel);
-            this.Controls.Add(this.UsernameLabel);
-            this.Controls.Add(this.PasswordInput);
-            this.Controls.Add(this.UsernameInput);
-            this.Controls.Add(this.LogInConfirmButton);
+            this.Controls.Add(this.ConsolePanel);
+            this.Controls.Add(this.LoginPanel);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "MainWindow";
             this.Text = "fast minecraft launcher";
+            this.LoginPanel.ResumeLayout(false);
+            this.LoginPanel.PerformLayout();
+            this.ConsolePanel.ResumeLayout(false);
+            this.ConsolePanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -149,6 +195,10 @@
         private System.Windows.Forms.CheckBox SaveLoginInfo;
         private System.Windows.Forms.RichTextBox ConsoleLog;
         private System.Windows.Forms.Label ConsoleLogLabel;
+        private System.Windows.Forms.Panel LoginPanel;
+        private System.Windows.Forms.Panel ConsolePanel;
+        private System.Windows.Forms.Panel LauncherPanel;
+        private System.Windows.Forms.CheckBox ShowPasswordCheckBox;
     }
 }
 
