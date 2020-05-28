@@ -12,14 +12,29 @@ namespace fast_minecraft_launcher
 
     class MojangAuthentication
     {
-        private static readonly HttpClient webClient = new HttpClient();
+        private static MojangAuthentication instance;
 
-        //Generate access token
-        public static async Task<string> SendRequest(IServerRequest requestPayload)
+        public static MojangAuthentication getInstance()
         {
-            Console.WriteLine(requestPayload.getPayload());
+            if (instance == null)
+            {
+                instance = new MojangAuthentication();
+            }
+
+            return instance;
+        }
+
+        private static HttpClient webClient;
+
+        public MojangAuthentication()
+        {
+            webClient = new HttpClient();
             webClient.BaseAddress = new Uri("https://authserver.mojang.com/");
             webClient.Timeout = TimeSpan.FromMilliseconds(5000);
+        }
+
+        private async Task<string> SendRequest(IServerRequest requestPayload)
+        {
             try
             {
                 HttpResponseMessage response = await webClient.PostAsync(
@@ -36,7 +51,7 @@ namespace fast_minecraft_launcher
 
         }
 
-        public static async Task<AuthenticationResponse> GetAuthenticationResponse(AuthenticationPayload payload)
+        public async Task<AuthenticationResponse> GetAuthenticationResponse(AuthenticationPayload payload)
         {
             return JsonConvert.DeserializeObject<AuthenticationResponse>(await SendRequest(payload));
         }

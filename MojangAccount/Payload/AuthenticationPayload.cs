@@ -9,10 +9,10 @@ namespace fast_minecraft_launcher.MojangAccount.Payload
 {
     class AuthenticationPayload : IServerRequest
     {
-        private Dictionary<string, Object> agent;
-        private string username;
-        private string password;
-        private string clientToken;
+        public Dictionary<string, Object> agent;
+        public string username;
+        public string password;
+        // public string clientToken;
 
         public AuthenticationPayload(string username, string password)
         {

@@ -14,15 +14,18 @@ namespace fast_minecraft_launcher
 
         private async void LogInConfirmButton_Click(object sender, EventArgs e)
         {
-            ConsoleLog.AppendText("log in pressed");
-            await MojangAuthentication.GetAuthenticationResponse(new AuthenticationPayload(UsernameInput.Text, PasswordInput.Text));
+            ConsoleLog.WriteLine("Log in pressed");
             LogInConfirmButton.Enabled = false;
-            LogInConfirmButton.Text = "Logging in";
+            LogInConfirmButton.Text = "logging in";
+            await MojangAuthentication.getInstance().GetAuthenticationResponse(new AuthenticationPayload(UsernameInput.Text, PasswordInput.Text));
+            ConsoleLog.WriteLine("Response received");
+            LogInConfirmButton.Enabled = true;
+            LogInConfirmButton.Text = "log in";
         }
 
         private void SaveLoginInfo_CheckedChanged(object sender, EventArgs e)
         {
-            ConsoleLog.AppendText("checkbox changed");
+            ConsoleLog.WriteLine("Save login checked");
         }
 
         private void ShowPasswordCheckBox_CheckedChanged(object sender, EventArgs e)

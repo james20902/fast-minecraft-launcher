@@ -1,4 +1,6 @@
-﻿namespace fast_minecraft_launcher
+﻿using fast_minecraft_launcher.GUI;
+
+namespace fast_minecraft_launcher
 {
     partial class MainWindow
     {
@@ -34,7 +36,7 @@
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.SaveLoginInfo = new System.Windows.Forms.CheckBox();
-            this.ConsoleLog = new System.Windows.Forms.RichTextBox();
+            this.ConsoleLog = new ConsoleTextBox();
             this.ConsoleLogLabel = new System.Windows.Forms.Label();
             this.LoginPanel = new System.Windows.Forms.Panel();
             this.LauncherPanel = new System.Windows.Forms.Panel();
@@ -125,7 +127,6 @@
             // LoginPanel
             // 
             this.LoginPanel.Controls.Add(this.ShowPasswordCheckBox);
-            this.LoginPanel.Controls.Add(this.LauncherPanel);
             this.LoginPanel.Controls.Add(this.UsernameInput);
             this.LoginPanel.Controls.Add(this.LogInConfirmButton);
             this.LoginPanel.Controls.Add(this.UsernameLabel);
@@ -139,7 +140,7 @@
             // 
             // LauncherPanel
             // 
-            this.LauncherPanel.Location = new System.Drawing.Point(0, 0);
+            this.LauncherPanel.Location = new System.Drawing.Point(12, 15);
             this.LauncherPanel.Name = "LauncherPanel";
             this.LauncherPanel.Size = new System.Drawing.Size(314, 215);
             this.LauncherPanel.TabIndex = 6;
@@ -157,7 +158,7 @@
             // ShowPasswordCheckBox
             // 
             this.ShowPasswordCheckBox.AutoSize = true;
-            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(121, 96);
+            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(111, 96);
             this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
             this.ShowPasswordCheckBox.Size = new System.Drawing.Size(99, 17);
             this.ShowPasswordCheckBox.TabIndex = 7;
@@ -172,6 +173,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(655, 242);
             this.Controls.Add(this.ConsolePanel);
+            this.Controls.Add(this.LauncherPanel);
             this.Controls.Add(this.LoginPanel);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -193,7 +195,7 @@
         private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.CheckBox SaveLoginInfo;
-        private System.Windows.Forms.RichTextBox ConsoleLog;
+        private ConsoleTextBox ConsoleLog;
         private System.Windows.Forms.Label ConsoleLogLabel;
         private System.Windows.Forms.Panel LoginPanel;
         private System.Windows.Forms.Panel ConsolePanel;

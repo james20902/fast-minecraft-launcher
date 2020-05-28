@@ -49,10 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWindow.cs">
+    <Compile Include="GUI\ConsoleTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainWindow.Designer.cs">
+    <Compile Include="GUI\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="MojangAccount\MojangAuthentication.cs" />
@@ -63,7 +66,7 @@
     <Compile Include="MojangAccount\Payload\ErrorResponse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainWindow.resx">
+    <EmbeddedResource Include="GUI\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
